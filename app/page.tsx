@@ -42,6 +42,16 @@ export default function Home() {
               I am a Junior Frontend Engineer and Web Developer
             </p>
 
+            <Link href="/images/resume.pdf" className="bg-sky-500 hover:bg-sky-700 p-2 inline-block m-1.5 rounded-full"> Link to Resume </Link>
+
+            <div className="flex justify-center items-center mt-4 font-bold">
+              <h2> Links to my socials: </h2>
+
+              <a href="https://github.com/OctoDev8"><Image src="/images/github.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
+              <a href="https://linkedin.com/in/gabriel-mejorada-33a328302"><Image src="/images/linkedin.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
+           </div>
+
+
             <h1 className="text-lg text-white font-bold border-sky-500 rounded-full bg-sky-500 px-4 py-1 mt-8 inline-block">
               Education:
             </h1>

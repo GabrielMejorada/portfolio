@@ -38,7 +38,7 @@ export default function Projects() {
             </h2>
             <Card
               id="read-more-text"
-              text="Golden Wheat Bakery is a group project that I did in college."
+              text="Golden Wheat Bakery is a collaborative college project where I focused on backend development. My work included designing and implementing Express.js middleware and routes, integrating MongoDB for database operations, and using Postman extensively for testing and debugging to ensure a reliable application."
             />
           </section>
         </section>
