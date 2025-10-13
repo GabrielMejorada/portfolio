@@ -7,6 +7,7 @@ const Form = () => {
 
   return (
     <>
+    <div className="p-4 rounded-md bg-sky-500">
       <h1 className="font-bold text-3xl mb-1.5 mt-8">Contact Me Form</h1>
       <form action={endpoint} method="post" acceptCharset="UTF-8">
         <div className="pt-0 mb-3">
@@ -46,6 +47,7 @@ const Form = () => {
           </button>
         </div>
       </form>
+    </div>
     </>
   );
 };
