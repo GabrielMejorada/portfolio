@@ -7,9 +7,6 @@ export default function Home() {
     <>
       <>
         <header className="border-sky-500 bg-sky-500 p-4">
-          <h1 className="text-center text-lg text-blue-800 font-bold">
-            Portfolio Website
-          </h1>
           <nav className="flex justify-center space-x-4 mt-2">
             <Link
               href="/projects"
@@ -33,24 +30,17 @@ export default function Home() {
               About Me:
             </h1>
 
-            <div className="flex justify-center items-center space-x-2 mt-4">
-              <p className=" font-semibold">Name:</p>
-              <p>Gabriel Mejorada</p>
-            </div>
-
-            <p className="mt-2">
-              I am a Junior Frontend Engineer and Web Developer
+            <p className="mt-2 mb-2">
+              Hi! I am Gabriel Mejorada, an aspiring jr web developer trying to find their specialty.
             </p>
 
-            <Link href="/images/resume.pdf" className="bg-sky-500 hover:bg-sky-700 p-2 inline-block m-1.5 rounded-full"> Link to Resume </Link>
-
             <div className="flex justify-center items-center mt-4 font-bold">
-              <h2> Links to my socials: </h2>
+              <h2> Links to my resume and socials:</h2>
 
+              <Link href="/images/resume.pdf" className="bg-sky-700 p-2 inline-block m-1.5 rounded-full"> Resume </Link>
               <a href="https://github.com/OctoDev8"><Image src="/images/github.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
               <a href="https://linkedin.com/in/gabriel-mejorada-33a328302"><Image src="/images/linkedin.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
            </div>
-
 
             <h1 className="text-lg text-white font-bold border-sky-500 rounded-full bg-sky-500 px-4 py-1 mt-8 inline-block">
               Education:
@@ -63,7 +53,7 @@ export default function Home() {
 
           <section className="w-full max-w-4xl mx-auto mt-8">
             <h1 className="text-lg font-bold text-white border-sky-500 rounded-full bg-sky-500 px-4 py-1 inline-block mb-4 text-center">
-              Programming Languages I am proficient in
+             Programming languages and frameworks I work with
             </h1>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
@@ -103,9 +93,6 @@ export default function Home() {
           </section>
 
           <section className="w-full max-w-4xl mx-auto mt-8">
-            <h1 className="text-lg font-bold text-white border-sky-500 rounded-full bg-sky-500 px-4 py-1 inline-block mb-4 text-center">
-              Frameworks I am proficient in
-            </h1>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl h">
