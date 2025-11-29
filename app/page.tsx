@@ -5,9 +5,15 @@ import Form from "./components/Form";
 export default function Home() {
   return (
     <>
-      <>
-        <header className="border-sky-500 bg-sky-500 p-4">
-          <nav className="flex justify-center space-x-4 mt-2">
+    <div className="flex min-h-screen flex-col">
+    <header>
+      <nav className="flex justify-center space-x-4 mt-2">
+        <Link
+           href="/about"
+            className="m-1.5 font-bold inline-flex items-center"
+            >
+              About Me
+            </Link>
             <Link
               href="/projects"
               className="m-1.5 font-bold inline-flex items-center"
@@ -24,128 +30,13 @@ export default function Home() {
           </nav>
         </header>
 
-        <main className="flex flex-col items-center text-center mt-6 space-y-8">
-          <section className="w-full max-w-lg">
-            <h1 className="text-lg text-white font-bold border-sky-500 rounded-full bg-sky-500 px-4 py-1 inline-block">
-              About Me:
-            </h1>
-
-            <p className="mt-2 mb-2">
+        <main className="flex items-center justify-center min-h-screen text-center">
+          {/* Hero section */}
+            <p className="text-7xl">
               Hi! I am Gabriel Mejorada, an aspiring jr web developer trying to find their specialty.
             </p>
-
-            <div className="flex justify-center items-center mt-4 font-bold">
-              <h2> Links to my resume and socials:</h2>
-
-              <Link href="/images/resume.pdf" className="bg-sky-700 p-2 inline-block m-1.5 rounded-full"> Resume </Link>
-              <a href="https://github.com/OctoDev8"><Image src="/images/github.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
-              <a href="https://linkedin.com/in/gabriel-mejorada-33a328302"><Image src="/images/linkedin.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
-           </div>
-
-            <h1 className="text-lg text-white font-bold border-sky-500 rounded-full bg-sky-500 px-4 py-1 mt-8 inline-block">
-              Education:
-            </h1>
-            <p className="font-extrabold mt-2">
-              Certificate of Web Development from Southern Alberta Institute of
-              Technology
-            </p>
-          </section>
-
-          <section className="w-full max-w-4xl mx-auto mt-8">
-            <h1 className="text-lg font-bold text-white border-sky-500 rounded-full bg-sky-500 px-4 py-1 inline-block mb-4 text-center">
-             Programming languages and frameworks I work with
-            </h1>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/js-logo.png"
-                  alt="JavaScript logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">JavaScript</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/css-logo.png"
-                  alt="CSS logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">CSS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/c-logo.png"
-                  alt="C logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">C</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="w-full max-w-4xl mx-auto mt-8">
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl h">
-                <Image
-                  src="/images/react-logo.png"
-                  alt="React logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">React</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/express-logo.png"
-                  alt="Express logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">ExpressJS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/tailwind-logo.png"
-                  alt="Tailwind logo"
-                  width={48}
-                  height={60}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">Tailwind CSS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/bootstrap-logo.png"
-                  alt="Bootstrap logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">Bootstrap CSS</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="contact" className="mt-16">
-            <Form></Form>
-          </section>
         </main>
-      </>
-    </>
+        </div>
+        </>
   );
 }

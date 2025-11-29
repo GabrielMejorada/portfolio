@@ -4,17 +4,19 @@ import { Card } from "../components/Card";
 export default function Projects() {
   return (
     <>
-      <header className="border-sky-500 bg-sky-500 p-4">
-        <h1 className="text-blue-800 font-extrabold text-center">
-          {" "}
-          Projects Page
-        </h1>
+      <header>
         <nav className="flex justify-center space-x-4 mt-2">
           {" "}
           <Link href="/" className="m-1.5 font-bold inline-flex items-center">
             {" "}
             Home{" "}
           </Link>
+            <Link
+           href="/about"
+            className="m-1.5 font-bold inline-flex items-center"
+            >
+              About Me
+            </Link>
         </nav>
       </header>
       <main>
