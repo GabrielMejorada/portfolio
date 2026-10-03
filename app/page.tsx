@@ -30,9 +30,19 @@ export default function Home() {
           </nav>
         </header>
 
-        <main className="flex items-center justify-center min-h-screen text-center">
+        <main className="relative flex items-center justify-center min-h-screen overflow-hidden text-center px-4">
           {/* Hero section */}
-            <p className="text-7xl">
+          <div className="flex flex-col items-center text-center mt-6 space-y-8">
+            <Image
+              src="/images/background.png"
+              alt="background"
+              fill
+              priority
+              className="object-cover blur-md scale-110 -z-10"
+            />
+          </div>
+          <div className="absolute inset-0 bg-black/40 -z-10"/>
+            <p className="text-4xl md:text-6xl font-bold text-white max-w-4xl">
               Hi! I am Gabriel Mejorada, an aspiring jr web developer trying to find their specialty.
             </p>
         </main>
