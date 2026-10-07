@@ -39,12 +39,22 @@ export default function Home() {
               fill
               priority
               className="object-cover blur-md scale-110 -z-10"
+              loading="lazy"
             />
           </div>
-          <div className="absolute inset-0 bg-black/40 -z-10"/>
-            <p className="text-4xl md:text-6xl font-bold text-white max-w-4xl">
-              Hi! I am Gabriel Mejorada, an aspiring jr web developer trying to find their specialty.
-            </p>
+         <div className="relative">
+            <div className="absolute inset-0 -z-10 bg-black/40" />
+
+            <div className="text-left">
+              <h1 className="text-5xl font-bold tracking-tight leading-tight">
+                Gabriel Mejorada
+              </h1>
+              {"TODO: Figure out why text-color is not working."}
+              <p className="mt-3 text-2xl text-amber-400">
+                Junior Web Developer
+              </p>
+            </div>
+          </div>
         </main>
         </div>
         </>

@@ -66,6 +66,17 @@ export default function Projects() {
               text="An ongoing project; a makeshift e-commerce website attempting to emulate luxury through a fictional luxury fashion brand."
             />
             </section>
+            <section className="flex mt-8 bg-sky-500 rounded-xl p-4 flex-col items-center max-w-sm mx-auto">
+            <h1 className="text-blue-800 text-xl"> Twitch Chatbot </h1>
+            <Link href="https://github.com/GabrielMejorada/twitch-chatbot" className="text-decoration-line: underline bold text-lg inline-block hover:grey-500">
+              {""}
+              Twitch-Chatbot
+            </Link>
+            <Card
+              id="read-more-text"
+              text="An ongoing project; a makeshift e-commerce website attempting to emulate luxury through a fictional luxury fashion brand."
+            />
+            </section>
       </main>
     </>
   );
