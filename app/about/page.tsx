@@ -108,7 +108,7 @@ export default function(){
 
               <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
                 <Image
-                  src="/images/bootstrap-logo.png"
+                  src="/images/python-logo.png"
                   alt="Bootstrap logo"
                   width={48}
                   height={48}
