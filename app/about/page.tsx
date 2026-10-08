@@ -109,7 +109,7 @@ export default function(){
               <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
                 <Image
                   src="/images/python-logo.png"
-                  alt="Bootstrap logo"
+                  alt="Python logo"
                   width={48}
                   height={48}
                   loading="lazy"
@@ -124,7 +124,7 @@ export default function(){
                   height={48}
                   loading="lazy"
                 />
-                <p className="text-white mt-2 font-semibold">Python</p>
+                <p className="text-white mt-2 font-semibold">Bootstrap CSS</p>
               </div>
             </div>
           </section>
