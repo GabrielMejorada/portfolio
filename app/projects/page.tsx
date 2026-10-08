@@ -1,24 +1,11 @@
 import Link from "next/link";
 import { Card } from "../components/Card";
+import Navbar from "../components/Navbar";
 
 export default function Projects() {
   return (
     <>
-      <header>
-        <nav className="flex justify-center space-x-4 mt-2">
-          {" "}
-          <Link href="/" className="m-1.5 font-bold inline-flex items-center">
-            {" "}
-            Home{" "}
-          </Link>
-            <Link
-           href="/about"
-            className="m-1.5 font-bold inline-flex items-center"
-            >
-              About Me
-            </Link>
-        </nav>
-      </header>
+      <Navbar/>
       <main>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <section className="flex mt-8 bg-sky-500 rounded-xl p-4 flex-col items-center max-w-sm mx-auto">

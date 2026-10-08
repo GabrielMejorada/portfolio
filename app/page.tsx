@@ -1,62 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
-import Form from "./components/Form";
+import Navbar from "./components/Navbar";
+// import Form from "./components/Form";
 
 export default function Home() {
   return (
-    <>
-    <div className="flex min-h-screen flex-col">
-    <header>
-      <nav className="flex justify-center space-x-4 mt-2">
-        <Link
-           href="/about"
-            className="m-1.5 font-bold inline-flex items-center"
-            >
-              About Me
-            </Link>
-            <Link
-              href="/projects"
-              className="m-1.5 font-bold inline-flex items-center"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              scroll={true}
-              className="m-1.5 font-bold inline-flex items-center"
-            >
-              Contact Me
-            </Link>
-          </nav>
-        </header>
-
-        <main className="relative flex items-center justify-center min-h-screen overflow-hidden text-center px-4">
-          {/* Hero section */}
-          <div className="flex flex-col items-center text-center mt-6 space-y-8">
-            <Image
-              src="/images/background.png"
-              alt="background"
-              fill
-              priority
-              className="object-cover blur-md scale-110 -z-10"
-              loading="lazy"
-            />
-          </div>
-         <div className="relative">
-            <div className="absolute inset-0 -z-10 bg-black/40" />
-
-            <div className="text-left">
-              <h1 className="text-5xl font-bold tracking-tight leading-tight">
-                Gabriel Mejorada
-              </h1>
-              {"TODO: Figure out why text-color is not working."}
-              <p className="mt-3 text-2xl text-amber-400">
-                Junior Web Developer
-              </p>
-            </div>
-          </div>
-        </main>
+    <div className="flex flex-col min-h-screen text-white">
+      <Navbar/>
+      
+      {/* Hero Section */}
+      <main className="relative flex flex-col items-center justify-center flex-grow overflow-hidden px-4 min-h-screen">
+        
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-20">
+          <Image
+            src="/images/background.png"
+            alt="background"
+            fill
+            className="object-cover blur-sm scale-105"
+            loading="eager"
+            priority
+          />
         </div>
-        </>
+
+        <div className="absolute inset-0 -z-10 bg-black/50" />
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg">
+            Gabriel Mejorada
+          </h1>
+          <p className="mt-4 text-2xl md:text-3xl font-light text-amber-400 drop-shadow-md">
+            Junior Web Developer
+          </p>
+        </div>
+
+      </main>
+    </div>
   );
 }

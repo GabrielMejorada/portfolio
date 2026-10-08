@@ -1,37 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../components/Form";
+import Navbar from "../components/Navbar";
 
 export default function(){
     return(
         <>
-             <header>
-          <nav className="flex justify-center space-x-4 mt-2">
-            <Link href="/" className="m-1.5 font-bold inline-flex items-center">
-            {" "}
-            Home{" "}
-            </Link>
-            <Link
-              href="/about"
-              className="m-1.5 font-bold inline-flex items-center"
-            >
-              About Me
-            </Link>
-            <Link
-              href="/projects"
-              className="m-1.5 font-bold inline-flex items-center"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              scroll={true}
-              className="m-1.5 font-bold inline-flex items-center"
-            >
-              Contact Me
-            </Link>
-          </nav>
-        </header>
+        <Navbar/>
 
         <main className="flex flex-col items-center text-center mt-6 space-y-8">
           {/* Hero section */}
