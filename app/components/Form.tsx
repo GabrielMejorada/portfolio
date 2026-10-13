@@ -6,49 +6,50 @@ const Form = () => {
   const { formState, getFormSubmitHandler } = useFormData(endpoint);
 
   return (
-    <>
-    <div className="p-4 rounded-md bg-sky-500">
-      <h1 className="font-bold text-3xl mb-1.5 mt-8">Contact Me Form</h1>
-      <form action={endpoint} method="post" acceptCharset="UTF-8">
-        <div className="pt-0 mb-3">
+    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl max-w-md mx-auto text-left">
+      <h2 className="text-xl font-bold text-slate-100 mb-6 text-center">Contact Me</h2>
+      
+      <form onSubmit={getFormSubmitHandler()} className="space-y-4">
+        <div>
           <input
             type="text"
             placeholder="Your name"
             name="name"
-            className="w-full px-4 py-4 text-lg text-gray-600 placeholder-gray-400 bg-white border-0 rounded-2xl shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+            className="w-full px-4 py-3 text-sm text-slate-200 placeholder-slate-500 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-sky-500 transition-all"
             required
           />
         </div>
-        <div className="pt-0 mb-3">
+        <div>
           <input
             type="email"
             placeholder="Email"
             name="email"
-            className="w-full px-4 py-4 text-lg text-gray-600 placeholder-gray-400 bg-white border-0 rounded-2xl shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+            className="w-full px-4 py-3 text-sm text-slate-200 placeholder-slate-500 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-sky-500 transition-all"
             required
           />
         </div>
-        <div className="pt-0 mb-3">
+        <div>
           <textarea
             placeholder="Your message"
             name="message"
-            className="w-full px-4 py-4 text-lg text-gray-600 placeholder-gray-400 bg-white border-0 rounded-2xl shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all resize-none"
-            rows={5}
+            className="w-full px-4 py-3 text-sm text-slate-200 placeholder-slate-500 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-sky-500 transition-all resize-none"
+            rows={4}
             required
           />
         </div>
-        <div className="pt-0 mb-3">
+        
+        <input type="checkbox" name="_gotcha" className="hidden" style={{ display: 'none' }} />
+
+        <div>
           <button
-            className="w-full py-4 text-lg font-bold text-white uppercase bg-blue-500 rounded-2xl shadow hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+            className="w-full py-3 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-sky-400"
             type="submit"
-            name="_gotcha"
           >
-            Send a message
+            Send a Message
           </button>
         </div>
       </form>
     </div>
-    </>
   );
 };
 

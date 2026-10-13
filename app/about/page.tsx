@@ -3,136 +3,83 @@ import Image from "next/image";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 
-export default function(){
-    return(
-        <>
-        <Navbar/>
+export default function Home() {
+  return (
+    <>
+      <Navbar />
 
-        <main className="flex flex-col items-center text-center mt-6 space-y-8">
-          {/* Hero section */}
-          <section className="w-full max-w-lg">
-            <div className="flex justify-center items-center mt-4 font-bold">
-              <h2> Links to my resume and socials:</h2>
+      <main className="flex flex-col items-center text-center px-4 mt-8 space-y-16 max-w-5xl mx-auto">
 
-              <Link href="/images/resume.pdf" className="bg-sky-700 p-2 inline-block m-1.5 rounded-full"> Resume </Link>
-              <a href="https://github.com/OctoDev8"><Image src="/images/github.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
-              <a href="https://linkedin.com/in/gabriel-mejorada-33a328302"><Image src="/images/linkedin.png" alt="Github logo" width={60} height={60} loading="lazy"/></a>
-           </div>
+        {/* Hero Section */}
+        <section className="w-full max-w-2xl space-y-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-slate-300 font-medium">
+            <h2>Links to my resume and socials:</h2>
+            <div className="flex items-center gap-3">
+              <Link href="/images/resume.pdf" className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                Resume
+              </Link>
 
-            <h1 className="text-lg text-white font-bold border-sky-500 rounded-full bg-sky-500 px-4 py-1 mt-8 inline-block">
-              Education:
-            </h1>
-            <p className="font-extrabold mt-2">
-              Certificate of Web Development from Southern Alberta Institute of
-              Technology
+              <a href="https://github.com/OctoDev8" className="bg-slate-800 hover:bg-slate-700 border border-slate-700 p-2 rounded-lg flex items-center justify-center transition-colors">
+                <Image src="/images/github.png" alt="Github logo" width={24} height={24} className="brightness-200" loading="lazy" />
+              </a>
+
+              <a href="https://linkedin.com/in/gabriel-mejorada-33a328302" className="bg-slate-800 hover:bg-slate-700 border border-slate-700 p-2 rounded-lg flex items-center justify-center transition-colors">
+                <Image src="/images/linkedin.png" alt="LinkedIn logo" width={24} height={24} loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl mt-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-sky-400 mb-2">
+              Education
+            </h3>
+            <p className="text-lg text-slate-100 font-bold">
+              Certificate of Web Development from Southern Alberta Institute of Technology
             </p>
-          </section>
+          </div>
+        </section>
 
-          {/* List of skills */}
-          <section className="w-full max-w-4xl mx-auto mt-8">
-            <h1 className="text-lg font-bold text-white border-sky-500 rounded-full bg-sky-500 px-4 py-1 inline-block mb-4 text-center">
-             Programming languages and frameworks I work with
-            </h1>
+        {/* List of Skills */}
+        <section className="w-full">
+          <h2 className="text-xl font-bold text-slate-100 mb-6 text-center">
+            Programming languages and frameworks I work with
+          </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/js-logo.png"
-                  alt="JavaScript logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">JavaScript</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {[
+              { name: "JavaScript", src: "/images/js-logo.png" },
+              { name: "CSS", src: "/images/css-logo.png" },
+              { name: "C", src: "/images/c-logo.png" },
+              { name: "React", src: "/images/react-logo.png" },
+              { name: "ExpressJS", src: "/images/express-logo.png" },
+              { name: "Tailwind CSS", src: "/images/tailwind-logo.png" },
+              { name: "Python", src: "/images/python-logo.png" },
+              { name: "Bootstrap CSS", src: "/images/bootstrap-logo.png" },
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-slate-900 border border-slate-800 hover:border-sky-500/50 rounded-xl p-5 flex flex-col items-center justify-center transition-all duration-200 shadow-lg group"
+              >
+                <div className="h-12 flex items-center justify-center mb-3">
+                  <Image
+                    src={skill.src}
+                    alt={`${skill.name} logo`}
+                    width={42}
+                    height={42}
+                    className="object-contain group-hover:scale-105 transition-transform"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-slate-200 text-sm font-medium">{skill.name}</p>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/css-logo.png"
-                  alt="CSS logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">CSS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/c-logo.png"
-                  alt="C logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">C</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="w-full max-w-4xl mx-auto mt-8">
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl h">
-                <Image
-                  src="/images/react-logo.png"
-                  alt="React logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">React</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/express-logo.png"
-                  alt="Express logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">ExpressJS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/tailwind-logo.png"
-                  alt="Tailwind logo"
-                  width={48}
-                  height={60}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">Tailwind CSS</p>
-              </div>
-
-              <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/python-logo.png"
-                  alt="Python logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">Python</p>
-              </div>
-                <div className="bg-sky-500 rounded-xl p-4 flex flex-col items-center shadow-2xl">
-                <Image
-                  src="/images/bootstrap-logo.png"
-                  alt="Bootstrap logo"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
-                <p className="text-white mt-2 font-semibold">Bootstrap CSS</p>
-              </div>
-            </div>
-          </section>
-
-          <section id="contact" className="mt-16">
-            <Form></Form>
-          </section>
-        </main>
-        </>
-    )
+        {/* Contact Section */}
+        <section id="contact" className="w-full max-w-md pb-16">
+          <Form />
+        </section>
+      </main>
+    </>
+  )
 }
