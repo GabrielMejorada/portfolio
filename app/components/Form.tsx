@@ -2,7 +2,7 @@
 import { useFormData } from "herotofu-react";
 
 const Form = () => {
-  const endpoint = process.env.NEXT_SECRET_API_KEY ?? "";
+  const endpoint = process.env.NEXT_PUBLIC_API_KEY ?? "";
   const { formState, getFormSubmitHandler } = useFormData(endpoint);
 
   return (
